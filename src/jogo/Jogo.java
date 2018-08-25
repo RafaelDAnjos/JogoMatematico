@@ -5,17 +5,22 @@
  */
 package jogo;
 
-/**
- *
- * @author rafael
- */
+
+import javax.swing.JOptionPane;
 public class Jogo {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+     int flag = 1;
+     String flag2;
+     while(flag == 1){
+         Questao novapergunta;
+         novapergunta = new Questao();
+         flag2 = JOptionPane.showInputDialog("Deseja continuar o jogo? 1-Sim 2-Não");
+         flag = Integer.parseInt(flag2);
+     }
     }
     
 }
