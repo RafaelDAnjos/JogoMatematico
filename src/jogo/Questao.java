@@ -12,20 +12,24 @@ import javax.swing.JOptionPane;
  */
 public class Questao {
     private int opcao;
+    private int pontos;
+    private boolean flag;
+    
     public Questao(){
         this.opcao = ThreadLocalRandom.current().nextInt(0,3);
         if(this.opcao == 0){
             Adicao novaquestao;
             novaquestao = new Adicao();
-            novaquestao.verifica();
+            this.flag = novaquestao.verifica();
         }else if(this.opcao == 1){
             Subtracao novaquestao;
             novaquestao = new Subtracao();
-            novaquestao.verifica();
+            this.flag = novaquestao.verifica();
         }else if(this.opcao == 2){
             Multiplicacao novaquestao;
             novaquestao = new Multiplicacao();
-            novaquestao.verifica();
+            this.flag = novaquestao.verifica();
     }
-    }
+
+}
 }
