@@ -10,26 +10,28 @@ import javax.swing.JOptionPane;
  *
  * @author rafael
  */
-public class Questao {
-    private int opcao;
-    private int pontos;
-    private boolean flag;
+public abstract class Questao {
+    
+     int pontos;
+     int opcao;
+     int operador1;
+     int operador2;
+     int resposta;
     
     public Questao(){
-        this.opcao = ThreadLocalRandom.current().nextInt(0,3);
-        if(this.opcao == 0){
-            Adicao novaquestao;
-            novaquestao = new Adicao();
-            this.flag = novaquestao.verifica();
-        }else if(this.opcao == 1){
-            Subtracao novaquestao;
-            novaquestao = new Subtracao();
-            this.flag = novaquestao.verifica();
-        }else if(this.opcao == 2){
-            Multiplicacao novaquestao;
-            novaquestao = new Multiplicacao();
-            this.flag = novaquestao.verifica();
+        operador1 = ThreadLocalRandom.current().nextInt(0,20);
+        operador2 = ThreadLocalRandom.current().nextInt(0,20);
+        
     }
+    public abstract boolean verifica();
+    public  void ExibirResposta(){
+        if(this.verifica()){
+            JOptionPane.showInternalMessageDialog(null,"Você Acertou!");
+        }else{
+            JOptionPane.showInternalMessageDialog(null,"Você Errou!");
+        }
+    
+    }
+  
 
-}
 }
