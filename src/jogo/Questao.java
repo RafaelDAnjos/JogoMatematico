@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
  * @author rafael
  */
 public abstract class Questao {
+
     
      int pontos;
      int opcao;
@@ -24,6 +25,7 @@ public abstract class Questao {
         
     }
     public abstract boolean verifica();
+    
     public  void ExibirResposta(){
         if(this.verifica()){
             JOptionPane.showInternalMessageDialog(null,"Você Acertou!");

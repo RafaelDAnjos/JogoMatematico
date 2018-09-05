@@ -14,10 +14,11 @@ public class Main {
      */
     public static void main(String[] args) {
         
-         Questao novapergunta;
+        
 for(;;){
         
-         novapergunta = new Questao();
+        Jogo novojogo;
+        novojogo = new Jogo();
       
      }
     }

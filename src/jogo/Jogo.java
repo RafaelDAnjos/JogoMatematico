@@ -12,20 +12,21 @@ import java.util.concurrent.ThreadLocalRandom;
  * @author 20161bsi0527
  */
 public class Jogo {
-    
-    
-    this.opcao = ThreadLocalRandom.current().nextInt(0,3);
+    int opcao;
+    public Jogo(){
+    opcao = ThreadLocalRandom.current().nextInt(0,3);
         if(this.opcao == 0){
             Adicao novaquestao;
-            novaquestao = new Adicao(operador1,operador2,resposta);
-            this.flag = novaquestao.verifica();
+            novaquestao = new Adicao();
+            novaquestao.ExibirResposta();
         }else if(this.opcao == 1){
             Subtracao novaquestao;
             novaquestao = new Subtracao();
-            this.flag = novaquestao.verifica();
+            novaquestao.ExibirResposta();
         }else if(this.opcao == 2){
             Multiplicacao novaquestao;
             novaquestao = new Multiplicacao();
-            this.flag = novaquestao.verifica();
-    
+            novaquestao.ExibirResposta();
+        }
+}
 }
