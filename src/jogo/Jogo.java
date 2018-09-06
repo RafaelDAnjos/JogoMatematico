@@ -6,6 +6,7 @@
 package jogo;
 
 import java.util.concurrent.ThreadLocalRandom;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,20 +14,31 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class Jogo {
     int opcao;
-    public Jogo(){
-    opcao = ThreadLocalRandom.current().nextInt(0,3);
-        if(this.opcao == 0){
-            Adicao novaquestao;
+    Pontuacao ponto;
+    public void iniciaJogo(){
+            
+        opcao = ThreadLocalRandom.current().nextInt(0,3);
+        Questao novaquestao = null;
+        ponto = new Pontuacao();
+        int flag = 0;
+        while(flag == 0){
+        if(opcao == 0){
+        
             novaquestao = new Adicao();
-            novaquestao.ExibirResposta();
-        }else if(this.opcao == 1){
-            Subtracao novaquestao;
+            
+        }else if(opcao == 1){
+            
             novaquestao = new Subtracao();
-            novaquestao.ExibirResposta();
-        }else if(this.opcao == 2){
-            Multiplicacao novaquestao;
+            
+        }else if(opcao == 2){
+            
             novaquestao = new Multiplicacao();
-            novaquestao.ExibirResposta();
+           
         }
-}
+        novaquestao.exibirResposta();
+        ponto.verificarQuestao(novaquestao);
+        flag = JOptionPane.showConfirmDialog(null,"quer continuar o jogo? ");
+            }
+        ponto.exibirPontuacao();
+    }
 }

@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 public class Subtracao extends Questao {
     
     public Subtracao(){
-        String resp = JOptionPane.showInputDialog("Quanto é "+this.operador1+" - "+this.operador2+" ?");
+        String resp = JOptionPane.showInputDialog(null,"Quanto é "+this.operador1+" - "+this.operador2+" ?");
     }
 
     /**

@@ -6,7 +6,7 @@
 package jogo;
 
 
-import javax.swing.JOptionPane;
+
 public class Main {
 
     /**
@@ -15,12 +15,12 @@ public class Main {
     public static void main(String[] args) {
         
         
-for(;;){
-        
+
         Jogo novojogo;
         novojogo = new Jogo();
+        novojogo.iniciaJogo();
       
-     }
+     
     }
     
 }

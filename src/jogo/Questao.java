@@ -26,11 +26,11 @@ public abstract class Questao {
     }
     public abstract boolean verifica();
     
-    public  void ExibirResposta(){
+    public  void exibirResposta(){
         if(this.verifica()){
-            JOptionPane.showInternalMessageDialog(null,"Você Acertou!");
+            JOptionPane.showMessageDialog(null,"Você Acertou!");
         }else{
-            JOptionPane.showInternalMessageDialog(null,"Você Errou!");
+            JOptionPane.showMessageDialog(null,"Você Errou!");
         }
     
     }

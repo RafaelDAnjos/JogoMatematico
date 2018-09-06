@@ -10,7 +10,7 @@ public class Adicao extends Questao {
     
     public Adicao(){
        
-        String resp = JOptionPane.showInputDialog("Quanto é "+operador1+" + "+operador2+"?");
+        String resp = JOptionPane.showInputDialog(null,"Quanto é "+operador1+" + "+operador2+"?");
         resposta = Integer.parseInt(resp);
     }
 

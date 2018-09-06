@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class Multiplicacao extends Questao {
     
     public Multiplicacao(){
-        String resp = JOptionPane.showInputDialog("Quanto é "+this.operador1+" X "+this.operador2+" ?");
+        String resp = JOptionPane.showInputDialog(null,"Quanto é "+this.operador1+" X "+this.operador2+" ?");
         resposta = Integer.parseInt(resp);
     }
     

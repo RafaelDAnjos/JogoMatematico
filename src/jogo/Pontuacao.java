@@ -19,6 +19,6 @@ public class Pontuacao {
         }
     }
     public void exibirPontuacao(){
-        JOptionPane.showInternalMessageDialog(null,"Você fez "+pontos+" pontos");
+        JOptionPane.showMessageDialog(null,"Você fez "+pontos+" pontos");
     }
 }
